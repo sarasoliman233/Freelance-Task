@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/lightGray"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:padding="@dimen/_16sdp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/mapId"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:src="@drawable/map"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+
+    <TextView
+
+        android:id="@+id/titleId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egypt"
+        android:fontFamily="@font/arialbold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@id/mapId"
+        app:layout_constraintTop_toTopOf="@id/mapId"
+        app:layout_constraintBottom_toBottomOf="@id/mapId"
+        android:padding="@dimen/_7sdp"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleId"
+        android:text="Today's Weather"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="@font/arialbold"
+        android:textColor="@color/blue"
+        android:padding="@dimen/_20sdp"
+        />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/today"
+        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+
+        >
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today, 12 September"
+            android:fontFamily="@font/light"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iconWeather"
+            app:layout_constraintStart_toStartOf="parent"
+
+             />
+        <ImageView
+            android:id="@+id/iconWeather"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/clear"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvDate"
+            app:layout_constraintBottom_toBottomOf="@id/cons"
+            />
+
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="dfg"
+            android:fontFamily="@font/arialb"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/iconWeather"
+
+            android:shadowColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/tvCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="dfg"
+            app:layout_goneMarginTop="30dp"
+            android:textColor="#78909C"
+            android:fontFamily="@font/arial"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/iconWeather"
+            app:layout_constraintTop_toBottomOf="@id/tvTemperature"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="7dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/weekly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons"
+        android:text="Weekly Weather"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="@font/arialbold"
+        android:textColor="@color/blue"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_20sdp"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/weekDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/weekly"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="12 , sep"
+        app:layout_constraintEnd_toStartOf="@id/weekImg"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/gray"
+
+        />
+    <ImageView
+        android:id="@+id/weekImg"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:src="@drawable/clear"
+        app:layout_constraintTop_toTopOf="@id/weekDate"
+        app:layout_constraintBottom_toBottomOf="@id/weekDate"
+       app:layout_constraintTop_toBottomOf="@id/weekly"
+        app:layout_constraintEnd_toStartOf="@id/weekTemp"
+        app:layout_constraintStart_toEndOf="@id/weekDate"
+        android:layout_marginStart="@dimen/_20sdp"
+
+
+
+        />
+    <TextView
+        android:id="@+id/weekTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/weekImg"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="22C"
+        app:layout_constraintTop_toTopOf="@id/weekImg"
+        app:layout_constraintBottom_toBottomOf="@id/weekImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/weekly"
+        android:textColor="@color/gray"/>
+
+    <TextView
+        android:id="@+id/weekDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="13 , sep"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@id/weekImg1"
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/weekDate" />
+
+    <ImageView
+        android:id="@+id/weekImg1"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:src="@drawable/clear"
+        app:layout_constraintTop_toTopOf="@id/weekDate1"
+        app:layout_constraintBottom_toBottomOf="@id/weekDate1"
+        app:layout_constraintTop_toBottomOf="@id/weekDate"
+        app:layout_constraintStart_toEndOf="@id/weekDate"
+        app:layout_constraintEnd_toStartOf="@id/weekTemp1"
+        android:layout_marginStart="@dimen/_20sdp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/weekTemp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/weekImg1"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="22C"
+        app:layout_constraintTop_toTopOf="@id/weekImg1"
+        app:layout_constraintBottom_toBottomOf="@id/weekImg1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/weekDate"
+        android:textColor="@color/gray"/>
+
+    <TextView
+        android:id="@+id/weekDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="15 , sep"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@id/weekImg2"
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/weekDate1" />
+
+    <ImageView
+        android:id="@+id/weekImg2"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:src="@drawable/clear"
+        app:layout_constraintBottom_toBottomOf="@id/weekDate2"
+        app:layout_constraintEnd_toStartOf="@id/weekTemp2"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toEndOf="@id/weekDate1"
+        app:layout_constraintTop_toBottomOf="@id/weekDate2"
+
+
+        app:layout_constraintTop_toTopOf="@id/weekDate2"
+        app:layout_constraintVertical_bias="0.857" />
+
+    <TextView
+        android:id="@+id/weekTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/weekImg1"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="22C"
+        app:layout_constraintTop_toTopOf="@id/weekImg2"
+        app:layout_constraintBottom_toBottomOf="@id/weekImg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/weekDate1"
+        android:textColor="@color/gray"/>
+
+
+
+
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/weeklyWeatherRv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/weekly"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="@dimen/_14sdp"-->
+<!--        android:background="@drawable/background"-->
+<!--        android:orientation="vertical"-->
+<!--        tools:listitem="@layout/weekly_desgin"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        />-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

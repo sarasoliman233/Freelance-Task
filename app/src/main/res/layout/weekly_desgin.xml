@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:paddingVertical="@dimen/_10sdp"
+    android:paddingHorizontal="@dimen/_20sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <TextView
+            android:id="@+id/weekDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/weekImg"
+            app:layout_constraintTop_toTopOf="@id/weekImg"
+            app:layout_constraintBottom_toBottomOf="@id/weekImg"
+            android:text="12 , sep"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/gray"
+
+            />
+        <ImageView
+            android:id="@+id/weekImg"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:src="@drawable/clear"
+            app:layout_constraintEnd_toStartOf="@id/weekTemp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/weekDate"
+            android:layout_marginStart="@dimen/_20sdp"
+
+
+
+            />
+        <TextView
+            android:id="@+id/weekTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/weekImg"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="22C"
+            app:layout_constraintTop_toTopOf="@id/weekImg"
+            app:layout_constraintBottom_toBottomOf="@id/weekImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/gray"/>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
